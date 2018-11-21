@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { currentIp } from '../../../ip';
 
 export const loginAction = (email, password, push) => {
     return async (dispatch) => {
         let response;
         try {
-            response = await axios.post(`http://localhost:3000/v1/user/login`,  {
+            response = await axios.post(`http://${currentIp}:3000/v1/user/login`,  {
                 email,
                 password
             });
@@ -31,7 +32,7 @@ export const registerNewUserAction = (userData) => {
     return async (dispatch) => {
         let response;
         try {
-            response = await axios.post(`http://localhost:3000/v1/user/create`, userData);
+            response = await axios.post(`http://${currentIp}:3000/v1/user/create`, userData);
 
             return dispatch({
                 type: 'register',
