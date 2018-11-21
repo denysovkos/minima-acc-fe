@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { currentIp } from '../../../ip';
+import { currentIp } from '../../ip';
 
 export const loginAction = (email, password, push) => {
     return async (dispatch) => {
