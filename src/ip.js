@@ -1,3 +1,3 @@
 import ip from 'ip';
-
-export const currentIp = ip.address();
+const x = ip.address();
+export const currentIp = x === '127.0.0.1' ? '18.184.66.188' : x;
