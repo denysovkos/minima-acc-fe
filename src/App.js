@@ -19,7 +19,8 @@ import SignOut from './pages/signout';
 import Account from './pages/account';
 import Settings from './pages/settings';
 import DashboardLayout from './components/dashboardLayout';
-import DEFAULT_PAGE from './pages/DEFAULT_PAGE';
+
+const DEFAULT_PAGE = () => <div>DEFAULT PAGE</div>
 
 const store = createStore(appReducer, composeWithDevTools(
   applyMiddleware(thunk),
