@@ -3,7 +3,7 @@ import http from 'http';
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || 3001, error => {
+server.listen(3001, error => {
   if (error) {
     console.log(error);
   }
