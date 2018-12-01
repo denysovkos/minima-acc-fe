@@ -5,11 +5,17 @@ const INITIAL_STATE = {
 export default function (state = INITIAL_STATE, action) {
     switch(action.type) {
         case 'get_company_success':
-            return action.payload[0]
+            return action.payload[0] || []
         case 'get_company_fail':
             return {
                 message: action.payload.data.message
             }
+        case 'add_company_success':
+            return state
+        case 'add_company_fail':
+            return {
+                message: action.payload.data.message
+            }    
         default:
             return state;
     }

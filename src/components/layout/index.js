@@ -19,7 +19,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+      <Responsive minWidth={Responsive.onlyMobile.minWidth}>
         <Visibility
           once={false}
           onBottomPassed={this.showFixedMenu}
@@ -42,9 +42,9 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item as='a'>Якась ссилка</Menu.Item>
+                <Menu.Item as='a'>Про компанію</Menu.Item>
+                <Menu.Item as='a'>Контакти</Menu.Item>
                 <Menu.Item position='right'>
                   <LoginControlOrUserMenu fixed={fixed} />
                 </Menu.Item>

@@ -13,7 +13,6 @@ class UserMenu extends Component {
     }
 
     render() {
-        console.log('PROPS IN USER MENU: ', this.props);
         const trigger = (
             <span>
               <Image avatar src={userImg} /> {this.props.user.firstName + ' ' + this.props.user.lastName}
@@ -21,9 +20,9 @@ class UserMenu extends Component {
           )
 
           const options = [
-            { key: 'user', text: 'Account', icon: 'user', value: 'account' },
-            { key: 'settings', text: 'Settings', icon: 'settings', value: 'settings' },
-            { key: 'sign-out', text: 'Sign Out', icon: 'sign out', value: 'signout' },
+            { key: 'user', text: 'Обліковий запис', icon: 'user', value: 'account' },
+            { key: 'settings', text: 'Налаштування', icon: 'settings', value: 'settings' },
+            { key: 'sign-out', text: 'Вихід', icon: 'sign out', value: 'signout' },
           ];
 
         return(

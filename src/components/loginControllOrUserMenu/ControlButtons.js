@@ -8,7 +8,7 @@ export default class ControlButtons extends Component {
             <Fragment>
             <Link to='/login'>
                 <Button inverted={!this.props.fixed} basic={this.props.fixed} color='green' >
-                        Log in
+                        Війти
                 </Button>
             </Link>
 
@@ -17,7 +17,7 @@ export default class ControlButtons extends Component {
                     inverted={!this.props.fixed}
                     color='green' 
                     basic={this.props.fixed} style={{ marginLeft: '0.5em' }}>
-                        Sign Up
+                        Зареєструватися
                 </Button>
             </Link>
             </Fragment>

@@ -6,7 +6,7 @@ export default class RecentActivity extends Component {
         return (
             <Card>
                 <Card.Content>
-                <Card.Header>Recent Activity</Card.Header>
+                <Card.Header>Події</Card.Header>
                 </Card.Content>
                 <Card.Content>
                 <Feed>
@@ -14,7 +14,7 @@ export default class RecentActivity extends Component {
                     <Feed.Content>
                         <Feed.Date content='1 day ago' />
                         <Feed.Summary>
-                        You added <a>Jenny Hess</a> to your <a>coworker</a> group.
+                        Ви додали <a>Jenny Hess</a> як Вашого <a>бухгалтера</a>.
                         </Feed.Summary>
                     </Feed.Content>
                     </Feed.Event>
@@ -23,7 +23,7 @@ export default class RecentActivity extends Component {
                     <Feed.Content>
                         <Feed.Date content='3 days ago' />
                         <Feed.Summary>
-                        You added <a>Molly Malone</a> as a friend.
+                        You створили договір з <a>Компанія "Якась"</a>.
                         </Feed.Summary>
                     </Feed.Content>
                     </Feed.Event>
@@ -32,7 +32,7 @@ export default class RecentActivity extends Component {
                     <Feed.Content>
                         <Feed.Date content='4 days ago' />
                         <Feed.Summary>
-                        You added <a>Elliot Baker</a> to your <a>musicians</a> group.
+                        Ви додали акт виконаних робіл <a>ТОВ "Підприємство"</a> № 32 від 10.12.2018р.
                         </Feed.Summary>
                     </Feed.Content>
                     </Feed.Event>

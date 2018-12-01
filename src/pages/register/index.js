@@ -14,7 +14,6 @@ class RegisterPage extends Component {
     }
 
     render() {
-        console.log(this.props);
         const { regFlow = {
             message: '',
             status: ''
@@ -33,31 +32,31 @@ class RegisterPage extends Component {
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
               <Grid.Column style={{ maxWidth: 450 }}>
                 <Header as='h2' color='teal' textAlign='center'>
-                    Register new account
+                    Зареєструвати новий обліковий запис
                 </Header>
                 <Form size='large'>
                   <Segment stacked>
                     <Form.Input 
                       fluid icon='mail' iconPosition='left' 
-                      placeholder='E-mail address' 
+                      placeholder='E-mail адреса' 
                       onChange={this.handleChange}
                       name='email'
                       />
                       <Form.Input 
                       fluid icon='user' iconPosition='left' 
-                      placeholder='First name' 
+                      placeholder="Ім'я"
                       onChange={this.handleChange}
                       name='firstName'
                       />
                       <Form.Input 
                       fluid icon='user' iconPosition='left' 
-                      placeholder='Last name' 
+                      placeholder='По-батькові' 
                       onChange={this.handleChange}
                       name='lastName'
                       />
                       <Form.Input 
                       fluid icon='phone' iconPosition='left' 
-                      placeholder='Phone' 
+                      placeholder='Телефон' 
                       onChange={this.handleChange}
                       name='phone'
                       />
@@ -65,7 +64,7 @@ class RegisterPage extends Component {
                       fluid
                       icon='lock'
                       iconPosition='left'
-                      placeholder='Password'
+                      placeholder='Пароль'
                       type='password'
                       name='password'
                       onChange={this.handleChange}
@@ -75,7 +74,7 @@ class RegisterPage extends Component {
                         fluid size='large'
                         onClick={() => this.props.registerNewUserAction(this.state)}
                         >
-                      Login
+                      Зареєструватися
                     </Button>
                     {message && 
                         <Message color={status === 'ok' ? 'green' : 'red'}>

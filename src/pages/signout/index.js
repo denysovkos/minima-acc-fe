@@ -12,7 +12,7 @@ class SignOut extends Component {
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
                 <Dimmer active inverted>
-                    <Loader size='massive'>Signing out</Loader>
+                    <Loader size='massive'>Виходимо ...</Loader>
                 </Dimmer>
             </Grid>
         )

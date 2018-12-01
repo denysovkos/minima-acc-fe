@@ -4,7 +4,7 @@ export default class Account extends Component {
     render() {
         return (
             <div>
-                Account info will be here
+                Тут будуть налаштування облікового запису
             </div>
         )
     }

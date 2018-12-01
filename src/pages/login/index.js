@@ -28,13 +28,13 @@ class LoginPage extends Component  {
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
               <Grid.Column style={{ maxWidth: 450 }}>
                 <Header as='h2' color='teal' textAlign='center'>
-                  <Image src={logo} /> Log-in to your account
+                  <Image src={logo} /> Вхід
                 </Header>
                 <Form size='large'>
                   <Segment stacked>
                     <Form.Input 
                       fluid icon='mail' iconPosition='left' 
-                      placeholder='E-mail address' 
+                      placeholder='E-mail адреса' 
                       onChange={this.handleChange}
                       name='email'
                       />
@@ -42,7 +42,7 @@ class LoginPage extends Component  {
                       fluid
                       icon='lock'
                       iconPosition='left'
-                      placeholder='Password'
+                      placeholder='Пароль'
                       type='password'
                       name='password'
                       onChange={this.handleChange}
@@ -52,13 +52,13 @@ class LoginPage extends Component  {
                         fluid size='large'
                         onClick={() => this.props.loginAction(this.state.email, this.state.password, this.props.history.push)}
                         >
-                      Login
+                      Вхід
                     </Button>
                     {message && <Message color='red'>{message}</Message>}
                   </Segment>
                 </Form>
                 <Message>
-                  New to us? <a href='/signup'>Sign Up</a>
+                  Не зареєстровані? <a href='/signup'>Зареєструватися!</a>
                 </Message>
               </Grid.Column>
             </Grid>

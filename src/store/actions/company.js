@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { currentIp } from '../../ip';
+import { currentIp, backendPort } from '../../ip';
 
 export const getCompany = (user) => {
     return async (dispatch) => {
         let response;
         try {
-            response = await axios.post(`http://${currentIp}:3000/v1/user/company`,  {
+            response = await axios.post(`http://${currentIp}:${backendPort}/v1/user/company`,  {
                 user: {
                     _id: user._id
                 },
@@ -18,7 +18,7 @@ export const getCompany = (user) => {
 
             dispatch({
                 type: 'get_company_success',
-                payload: response.data
+                payload: response.data || []
             });
             return;
         } catch (err) {
@@ -29,3 +29,34 @@ export const getCompany = (user) => {
         }   
     }
 };
+
+export const addCompany = (user, company, push) => {
+    return async (dispatch) => {
+        let response;
+        try {
+            response = await axios.post(`http://${currentIp}:${backendPort}/v1/user/company/add`,  {
+                user: {
+                    _id: user._id
+                },
+                userId: user._id,
+                ...company
+            }, {
+                headers: {
+                    'x-access-token': user.token,
+                }
+            });
+
+            dispatch({
+                type: 'add_company_success',
+                payload: response.data || []
+            });
+
+            push('/dashboard');
+        } catch (err) {
+            return dispatch({
+                type: 'add_company_fail',
+                payload: err.response
+            });
+        }
+    }
+}

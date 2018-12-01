@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 import { Card, Button, Loader } from 'semantic-ui-react';
 import { getCompany } from '../../store/actions/company';
 
@@ -13,19 +14,19 @@ const description = (company) => {
     return (
         <div>
             <p>
-                Type: {company.type}
+                Тип підприємства: {company.type}
             </p>
             <p>
-                CEO: {company.ceo}
+                Керівник: {company.ceo}
             </p>
             <p>
-                Accountant: {company.accountant}
+                Бухгалтел: {company.accountant}
             </p>
             <p>
-                Address: {company.address}
+                Адреса: {company.address}
             </p>
             <p>
-                Phone: {company.phone}
+                Телефон: {company.phone}
             </p>
         </div>
     )
@@ -42,6 +43,10 @@ class CompanyCard extends Component {
         const { company } = this.props;
         if (!company) {
             return <Loader active inline='centered' />
+        } else if (Array.isArray(company) && !company.length) {
+            return <Link to="/company/create">
+                <Button basic color="green">Створити нове підприємство</Button>
+            </Link>
         }
 
         return (

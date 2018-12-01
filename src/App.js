@@ -19,6 +19,7 @@ import SignOut from './pages/signout';
 import Account from './pages/account';
 import Settings from './pages/settings';
 import DashboardLayout from './components/dashboardLayout';
+import CompanyCreation from './pages/company/create';
 
 const DEFAULT_PAGE = () => <div>DEFAULT PAGE</div>
 
@@ -48,6 +49,8 @@ const App = () => (
         <PrivateRoute exact path="/signout" component={SignOut} />
         <PrivateRoute exact path="/account" component={Account} />
         <PrivateRoute exact path="/settings" component={Settings} />
+        <PrivateRoute exact path="/company/create" component={CompanyCreation} />
+        <PrivateRoute exact path="/company/edit" component={DEFAULT_PAGE} />
 
         <PrivateRoute exact path="/docs/statement" component={DEFAULT_PAGE} />
         <PrivateRoute exact path="/docs/acts" component={DEFAULT_PAGE} />
